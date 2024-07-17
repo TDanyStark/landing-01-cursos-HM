@@ -1,0 +1,91 @@
+---
+import Precio from "../components/Precio.astro";
+
+import Itemsandy from "../components/Itemsandy.astro";
+import { URL_BASE } from "../constans";
+import Calltoaction from "../components/Calltoaction.astro";
+
+const itemssandylist = [
+  "Esposa de Camilo, mamá de Fede y Majo.",
+  "Hija de Rigo y Claudia.",
+  "Ingeniera industrial.",
+  "Especialista en Desarrollo de marca e inteligencia de mercados.",
+  "Empresaria",
+  "CEO Market Support Miami LLC",
+  "Fundadora de Market Support LATAM",
+  "Fundadora y directora de Geo Expansión de la franquicia Arepa - Station (Colombia - Miami)",
+  "Publicista de corazón",
+  "Conferencista internacional",
+  "Emprendedora por afición.",
+];
+---
+
+<section class="py-52">
+  <Precio />
+
+  <div class="max-w-[1200px] mx-auto mt-44 p-2">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div>
+        <img src={URL_BASE + "img/sandy.webp"} alt="Foto de sandy baron" />
+      </div>
+      <div class="h-fit my-auto">
+        <h2
+          class="font-bold text-4xl lg:text-6xl text-morado-market text-center lg:text-left"
+        >
+          ¿QUIÉN ES <br />SANDY BARÓN?
+        </h2>
+        <ul class="lista-quien-es-sandy text-base text-gray-500 mt-8">
+          {itemssandylist.map((item) => <Itemsandy>{item}</Itemsandy>)}
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 text-gray-500">
+      <p>
+        Sandy Barón, fundadora y líder visionaria de Market Support, Market
+        Support Miami y Arepa Station, ha transformado la publicidad en un motor
+        de cambio positivo desde 2011. Con más de 100 campañas exitosas en
+        diversos sectores como el farmacéutico, tecnológico, industria de
+        alimentos, belleza, bienes raíces y de bienes de consumo, en países de
+        América Latina y Estados Unidos, Sandy ha establecido nuevos estándares
+        de excelencia y creatividad. Su enfoque pionero combina el fascinante
+        mundo de la publicidad y la búsqueda genuina por el bienestar de los
+        empresarios, entendiendo la gran responsabilidad de los diferentes
+        medios de comunicación; educando a profesionales, empresarios y
+        emprendedores para mejorar y transformar sus marcas. Colaborando en sus
+        grandes lanzamientos y estrategias de marketing en sus amplios
+        portafolios de productos y servicios con gigantes como Abbott en toda la
+        región LATAM, Unilever en Colombia, Centroamérica y Caribe, Grupo
+        Invekra en México entre otros. Sandy ha demostrado que el éxito
+        empresarial y la integridad pueden coexistir. Con una visión audaz y un
+        compromiso inquebrantable con el bienestar social y económico para todas
+        aquellas marcas que han confiado en ella y en sus agencias de
+        publicidad.
+      </p>
+    </div>
+
+    <div class="mt-20">
+      <Calltoaction fontsize="text-xl lg:text-3xl text-center">
+        No esperes más! No pierdas mas tiempo Inscríbete ahora y comienza a
+        transformar tu negocio.
+      </Calltoaction>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .lista-quien-es-sandy li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .lista-quien-es-sandy li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 1rem;
+    height: 1rem;
+    background-color: #692394;
+    border-radius: 9999px;
+  }
+</style>

@@ -1,0 +1,14 @@
+---
+import { URL_BASE } from "../constans"
+
+const {img} = Astro.props;
+---
+
+<li class="flex gap-6 items-center">
+  <div class="min-w-16">
+    <img src={URL_BASE + "iconos/"+img+".webp"} alt="Icono">
+  </div>
+  <p class="font-semibold text-xl text-gray-500">
+    <slot/>
+  </p>
+</li>

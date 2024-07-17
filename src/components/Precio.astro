@@ -1,0 +1,32 @@
+---
+import { URL_BASE } from "../constans"
+---
+
+<div class="relative z-10">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="text-morado-market text-4xl lg:text-6xl">
+      <h3 class="font-semibold text-center">CURSO VALORADO EN:</h3>
+      <h2 class="text-center font-bold"><span class="relative ribbow-price">497 USD</span></h2>
+    </div>
+    <div class="mt-8">
+      <div class="w-2/4 mx-auto">
+        <div class="md:-mr-20">
+          <img class="w-full" src={URL_BASE + "img/oferta.webp"} alt="Imagen con la oferta">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ribbow-price::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    height: 3px;
+    background-color: red;
+    transform: rotate(-5deg);
+  }
+</style>

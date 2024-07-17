@@ -1,0 +1,45 @@
+---
+import Calltoaction from "../components/Calltoaction.astro";
+import Item from "../components/Item.astro";
+
+const items = [
+  {
+    title: "Acceso a los 5 módulos de entrenamiento",
+  },
+  {
+    title: "5 Materiales de apoyo tipo infografía en cada módulo",
+  },
+  {
+    title: "5 recursos descargables para que pongas en práctica lo aprendido (WORKSHOP)",
+  },
+  {
+    title: "Ingreso a la plataforma ¡Hello Marketeros! Durante 1 año",
+  },
+  {
+    title: "Conversatorios virtuales de la Comunidad Hello Marketeros"
+  }
+]
+
+---
+
+<section class="-mt-20 lg:-mt-44 pt-44 lg:pt-[300px] pb-[500px] bg-violet-100">
+  <div class="max-w-[1000px] mx-auto p-2">
+    <div class="flex justify-center">
+      <Calltoaction fontsize="text-2xl lg:text-3xl text-center">
+        COMPRA TU PRIMER CURSO AQUI
+      </Calltoaction>
+    </div>
+    <div class="mt-20">
+      <h2 class="text-center text-4xl lg:text-6xl font-bold text-morado-market">¿QUÉ INCLUYE NUESTRO CURSO?</h2>
+      <ul class="w-fit mx-auto mt-20 flex flex-col gap-8">
+        {
+          items.map((item, index) => (
+            <Item img={"icono"+(index+1)}>
+              {item.title}
+            </Item>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
