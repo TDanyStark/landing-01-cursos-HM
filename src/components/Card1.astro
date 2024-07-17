@@ -1,0 +1,51 @@
+---
+const { color } = Astro.props;
+---
+
+<div
+  class="p-8 rounded-xl border-2 shadow-xl shadow-rosado-market/20 bg-violet-50"
+  style=`border-color: ${color}; color: ${color} ;`
+>
+  <div class="card1__img">
+    <div class="w-fit">
+      <svg
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="70"
+        viewBox="0 0 100.000000 100.000000"
+      >
+        <g
+          transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
+          fill="currentColor"
+        >
+          <path
+            d="M386 944 c-224 -54 -376 -287 -338 -516 62 -368 512 -515 773 -253
+    186 186 183 473 -7 655 -117 113 -268 153 -428 114z m219 -39 c312 -81 418
+    -473 191 -701 -241 -240 -651 -107 -709 230 -50 295 226 546 518 471z"
+          ></path>
+          <path
+            d="M300 620 c-11 -11 -20 -29 -20 -40 0 -11 9 -29 20 -40 11 -11 29 -20
+    40 -20 26 0 60 34 60 60 0 11 -9 29 -20 40 -11 11 -29 20 -40 20 -11 0 -29 -9
+    -40 -20z"
+          ></path>
+          <path
+            d="M620 620 c-11 -11 -20 -29 -20 -40 0 -11 9 -29 20 -40 11 -11 29 -20
+    40 -20 11 0 29 9 40 20 11 11 20 29 20 40 0 11 -9 29 -20 40 -11 11 -29 20
+    -40 20 -11 0 -29 -9 -40 -20z"
+          ></path>
+          <path
+            d="M403 402 c-52 -19 -123 -66 -123 -82 0 -22 22 -17 75 15 99 59 191
+    59 291 -1 38 -23 61 -31 67 -25 15 15 -17 47 -80 77 -71 35 -160 41 -230 16z"
+          ></path>
+        </g>
+      </svg>
+      <div class="h-1 w-5/6 mx-auto mt-3" style=`background-color: ${color};`></div>
+    </div>
+  </div>
+  <div class="mt-12">
+    <p class="font-semibold text-gray-500">
+      <slot />
+    </p>
+  </div>
+</div>

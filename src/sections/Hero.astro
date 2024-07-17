@@ -1,0 +1,61 @@
+---
+import Calltoaction from "../components/Calltoaction.astro";
+import { URL_BASE } from "../constans";
+---
+
+<main>
+  <section
+    class="bg-img"
+    style=`background-image: url(${URL_BASE + "img/bg.webp"});`
+  >
+    <div
+      class="max-w-[1200px] mx-auto py-8 lg:py-16 flex flex-col lg:flex-row justify-center gap-8 lg:gap-0 px-2"
+    >
+      <div class="basis-[45%] space-y-16">
+        <div>
+          <img
+            src={URL_BASE + "img/logohello.webp"}
+            alt="Logo Hello marqueteros"
+          />
+        </div>
+        <div class="space-y-4">
+          <h1 class="text-morado-market text-5xl font-bold text-balance">
+            ¡BIENVENIDO A CONSTRUIR BASES SÓLIDAS DE TU MARCA
+          </h1>
+          <p class="text-3xl font-semibold text-gray-500 text-balance">
+            EN LA NUEVA ERA DEL MARKETING DIGITAL!
+          </p>
+          <Calltoaction>
+            Inscríbete ahora
+          </Calltoaction>
+        </div>
+      </div>
+      <div class="basis-[55%] flex items-end">
+        <div class="w-full">
+          <img
+          class="w-full lg:-mb-24 xl:-mb-44 sombra"
+            src={URL_BASE + "img/mujer-portatil.webp"}
+            alt="Imagen de mujer sonriendo con un portatil en la mano"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="bg-morado-market w-full text-white py-2">
+      <p class="max-w-[1200px] mx-auto text-3xl text-center md:text-start px-2">¡Y comienza tu <span class="font-bold">transformación digital!</span></p>
+    </div>
+  </section>
+</main>
+
+<style>
+  .bg-img {
+    background-size: cover;
+    background-position: center;
+  }
+  .text-morado-market {
+    color: #6b2b9b;
+  }
+
+  .sombra{
+    filter: drop-shadow(15px 25px 40px #c21f8c);
+  }
+</style>
