@@ -1,9 +1,14 @@
 ---
 const {fontsize = 'text-4xl' } = Astro.props;
+import { URL_WEB_CHECKOUT, CheckoutProducto } from "../constans";
+
+const URL = URL_WEB_CHECKOUT + CheckoutProducto;
 ---
 
 <a
-  href="#"
+  href={URL}
+  target="_blank"
+  rel="noopener"
   class=`${fontsize} inline-block px-5 py-2 text-morado-market transition-colors duration-150 bg-verde-market rounded-full focus:shadow-outline font-bold`
 >
   <slot />

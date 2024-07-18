@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
 
   // base
-  base: "despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
+  base: "hm/cursos/despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
   // output dir
   outDir: "despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
 });
