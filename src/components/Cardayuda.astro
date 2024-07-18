@@ -1,0 +1,26 @@
+---
+import { URL_BASE } from "../constans";
+
+const {nombre, cargo, img, bandera} = Astro.props;
+---
+
+<article>
+  <div>
+    <div>
+      <img src={URL_BASE + "img/comerciales/"+img+".webp"} alt="">
+    </div>
+  </div>
+  <div class="text-center mt-10">
+    <h3 class="text-morado-market text-3xl lg:text-5xl font-bold">
+      {nombre}
+    </h3>
+    <h4 class="text-gray-500 text-xl lg:text-3xl font-semibold">
+      {cargo}
+    </h4>
+  </div>
+  <div class="mt-6">
+    <div class="w-fit mx-auto">
+      <img src={URL_BASE + "img/banderas/"+bandera+".webp"} alt={"Bandera de "+bandera}>
+    </div>
+  </div>
+</article>

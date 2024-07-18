@@ -1,0 +1,43 @@
+---
+import Cardayuda from "../components/Cardayuda.astro";
+---
+
+<section class="py-44 lg:py-60">
+  <div class="max-w-[1000px] mx-auto p-2">
+    <div>
+      <img src="" alt="Imagen con texto la suerte no existe" />
+    </div>
+    <div class="mt-32">
+      <div>
+        <h2
+          class="text-center font-bold text-4xl lg:text-6xl text-morado-market"
+        >
+          NECESITAS AYUDA
+        </h2>
+        <h3 class="text-center font-bold text-gray-500 text-2xl lg:text-4xl">
+          Contacta a nuestro comerciales
+        </h3>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between mt-20">
+        <Cardayuda
+          nombre="Juliet Garces"
+          cargo="Key Account Manager COL"
+          img="juliet"
+          bandera="col"
+        />
+        <Cardayuda
+          nombre="Leidy Poveda"
+          cargo="Key Account Manager MIA"
+          img="leidy"
+          bandera="usa"
+        />
+      </div>
+    </div>
+    <div class="mt-44">
+      <p class="text-4xl lg:text-6xl lg:leading-[4rem] text-center text-morado-market">
+        No esperes más para alcanzar tu máximo potencial e iniciar a comprender
+        este maravilloso mundo del marketing digital.
+      </p>
+    </div>
+  </div>
+</section>
