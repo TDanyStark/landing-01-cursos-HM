@@ -17,10 +17,7 @@ const { img, subtitulo, copy } = Astro.props;
   </div>
   <div class="basis-2/5 my-auto">
     <div >
-      <h3 class="text-gray-texto font-bold text-xl">
-        {subtitulo}
-      </h3>
-      <p class="text-gray-texto mt-6" set:html={copy} />
+      <p class="text-gray-texto mt-6 text-xl font-semibold" set:html={copy} />
     </div>
   </div>
 </article>
