@@ -16,6 +16,14 @@ import { URL_BASE } from '../constans';
 		<link rel="icon" type="image/webp" href={URL_BASE+"favicon.webp"} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- meta descripcion -->
+		<meta name="description" content="¡Despierta! Claves del Marketing: Transforma tu negocio con estrategias probadas. 5 módulos prácticos y teóricos para emprendedores y empresarios. ¡Inscríbete ya!" />
+
+		<!-- og:etiquetas -->
+		<meta property="og:title" content="¡Despierta! Claves del Marketing" />
+		<meta property="og:description" content="¡Despierta! Claves del Marketing: Transforma tu negocio con estrategias probadas. 5 módulos prácticos y teóricos para emprendedores y empresarios. ¡Inscríbete ya!" />
+		<meta property="og:image" content={URL_BASE + "img/og.jpg"} />
 	</head>
 	<body>
 		<slot />
