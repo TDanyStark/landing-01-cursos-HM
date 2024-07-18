@@ -1,72 +1,52 @@
 ---
 import Card2 from "../components/Card2.astro";
+
+const modulos = [
+  {
+    subtitulo: "Fundamentos para Construir tu marca desde cero y expandirla",
+    parrafo: "Comprenderás los principios esenciales para establecer y hacer crecer una marca en el mercado. Exploraras cómo adaptar estrategias globales a audiencias locales para maximizar el impacto."
+  },
+  {
+    subtitulo: "Estrategia de Marketing y Desarrollo de Marca",
+    parrafo: "Aprenderás y te entrenaras para detectar oportunidades en el mercado. Conocerás cómo segmentar a tus posibles compradores para hacer efectivas tus campañas. Aprenderás a identificar y conocer a tu comprador ideal - buyer persona",
+  },
+  {
+    subtitulo: "Revisiones claves en el desarrollo exitoso de una marca",
+    parrafo: "Comprenderás la importancia de una buena contabilidad y el poder de las finanzas. <br/>Dominarás las plataformas y herramientas digitales clave para implementar campañas de marketing exitosas. <br/>Aprenderás sobre una gestión eficaz de servicios digitales y la optimización de recursos.",
+  },
+  {
+    subtitulo: "Implementación y Optimización",
+    parrafo: "Comprenderás los principios esenciales para establecer y hacer crecer una marca en el mercado. Exploraras cómo adaptar estrategias globales a audiencias locales para maximizar el impacto.",
+  },
+  {
+    subtitulo: "Casos de Éxito y Conclusiones",
+    parrafo: "Aprenderás sobre casos de éxito y también sobre errores que otras marcas han vivido. Lecciones aprendidas y mejores prácticas para aplicar en tu propia carrera profesional.",
+  }
+];
+
 ---
 
 <section class="pb-44">
   <div class="max-w-[1200px] mx-auto p-2">
     <div>
-      <h2 class="text-center font-bold text-4xl lg:text-6xl text-morado-market">DESCUBRE LO QUE APRENDERÁS EN NUESTROS 5 POTENTES MÓDULOS:</h2>
+      <h2 class="text-center font-bold text-4xl lg:text-6xl text-morado-market">
+        DESCUBRE LO QUE APRENDERÁS EN NUESTROS 5 POTENTES MÓDULOS:
+      </h2>
     </div>
     <div class="mt-24">
-      <div class="cards-grid grid gap-8 grid-cols-1 lg:grid-cols-6">
-        <Card2
-          titulo="Módulo 1"
-          subtitulo="Fundamentos para Construir tu marca desde cero y expandirla"
-          color="morado-market"
-        >
-          Comprenderás los principios esenciales para establecer y hacer crecer
-          una marca en el mercado. Exploraras cómo adaptar estrategias globales
-          a audiencias locales para maximizar el impacto.
-        </Card2>
-        <Card2
-          titulo="Módulo 2"
-          subtitulo="Estrategia de Marketing y Desarrollo de Marca"
-          color="rosado-market"
-        >
-          Aprenderás y te entrenaras para detectar oportunidades en el mercado.
-          Conocerás cómo segmentar a tus posibles compradores para hacer
-          efectivas tus campañas. Aprenderás a identificar y conocer a tu
-          comprador ideal - buyer persona
-        </Card2>
-        <Card2
-          titulo="Módulo 3"
-          subtitulo="Revisiones claves en el desarrollo exitoso de una marca"
-          color="rosado-market"
-        >
-          Comprenderás la importancia de una buena contabilidad y el poder de
-          las finanzas Dominarás las plataformas y herramientas digitales clave
-          para implementar campañas de marketing exitosas. <br /> Aprenderás sobre
-          una gestión eficaz de servicios digitales y la optimización de recursos.
-        </Card2>
-
-        <Card2
-          titulo="Módulo 4"
-          subtitulo="Implementación y Optimización"
-          color="verde-market"
-        >
-          Comprenderás los principios esenciales para establecer y hacer crecer
-          una marca en el mercado. Exploraras cómo adaptar estrategias globales
-          a audiencias locales para maximizar el impacto.
-        </Card2>
-
-        <Card2
-          titulo="Módulo 5"
-          subtitulo="Casos de Éxito y Conclusiones"
-          color="morado-market"
-        >
-          Aprenderás sobre casos de éxito y también sobre errores que otras
-          marcas han vivido. Lecciones aprendidas y mejores prácticas para
-          aplicar en tu propia carrera profesional.
-        </Card2>
+      <div class="modulos">
+        {
+          modulos.map((modulo, index) => (
+            <Card2 img={index + 1} subtitulo={modulo.subtitulo} copy={modulo.parrafo}/>
+          ))
+        }
       </div>
     </div>
   </div>
 </section>
 
 <style is:global>
-  @media (min-width: 1024px) {
-      .cards-grid > article:nth-child(4) {
-      grid-column-start: 2;
-    }
+  .modulos article:not(:last-child) {
+    border-bottom: 3px solid #692394; /* Ajusta el color y grosor del borde según tus necesidades */
   }
 </style>

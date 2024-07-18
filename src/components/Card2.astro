@@ -1,21 +1,26 @@
 ---
-const {titulo, subtitulo, color} = Astro.props;
+import { URL_BASE } from "../constans";
+
+const { img, subtitulo, copy } = Astro.props;
 ---
 
-<article class={"col-span-2 border-4 rounded-xl p-8 border-"+color}>
-  <div class="flex flex-col justify-between">
-    <div class={"bg-"+color + " w-20 h-20 rounded-full"}></div>
-    <h3 class={"text-"+color+" text-5xl font-bold mt-6"}>
-      {titulo}
-    </h3>
-    <h4 class="text-gray-500 font-bold text-xl mt-6">
-      {subtitulo}
-    </h4>
+<article class="p-8 flex flex-col lg:flex-row justify-between xl:w-[80%] mx-auto gap-8 lg:gap-16">
+  <div class="basis-3/5">
+    <div>
+      <img
+        src={URL_BASE + "img/modulos/" + img + ".webp"}
+        alt="Imagen de la tarjeta"
+        class="w-full"
+        loading="lazy"
+      />
+    </div>
   </div>
-  <div class="mt-10">
-    <p class="text-gray-500 ">
-      <slot />
-    </p>
+  <div class="basis-2/5 my-auto">
+    <div >
+      <h4 class="text-gray-500 font-bold text-xl">
+        {subtitulo}
+      </h4>
+      <p class="text-gray-500 mt-6" set:html={copy} />
+    </div>
   </div>
 </article>
-

@@ -1,11 +1,16 @@
 ---
 import Cardayuda from "../components/Cardayuda.astro";
+import { URL_BASE } from "../constans";
 ---
 
 <section class="py-44 lg:py-60">
   <div class="max-w-[1000px] mx-auto p-2">
     <div>
-      <img src="" alt="Imagen con texto la suerte no existe" />
+      <div
+        class="globo p-4 lg:p-12 text-verde-market font-bold text-4xl lg:text-6xl text-center bg-morado-market rounded-3xl border-8 border-b-[20px] border-verde-market relative"
+      >
+        <p>"LA SUERTE NO EXISTE, EXISTE EL ENTRENAMIENTO Y LA OPORTUNIDAD"</p>
+      </div>
     </div>
     <div class="mt-32">
       <div>
@@ -18,7 +23,7 @@ import Cardayuda from "../components/Cardayuda.astro";
           Contacta a nuestro comerciales
         </h3>
       </div>
-      <div class="flex flex-col lg:flex-row justify-between mt-20">
+      <div class="flex flex-col lg:flex-row justify-between mt-20 gap-16">
         <Cardayuda
           nombre="Juliet Garces"
           cargo="Key Account Manager COL"
@@ -34,10 +39,31 @@ import Cardayuda from "../components/Cardayuda.astro";
       </div>
     </div>
     <div class="mt-44">
-      <p class="text-4xl lg:text-6xl lg:leading-[4rem] text-center text-morado-market">
-        No esperes más para alcanzar tu máximo potencial e iniciar a comprender
-        este maravilloso mundo del marketing digital.
-      </p>
+      <div
+        class="globo p-4 lg:p-12 text-morado-market text-4xl lg:text-6xl text-center bg-white rounded-3xl border-8 border-b-[20px] border-verde-market relative"
+      >
+        <p>
+          <span class="font-extrabold">No esperes más para alcanzar tu máximo potencial</span> e iniciar a
+          comprender este maravilloso mundo del marketing digital.
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .globo::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 80px;
+    background: transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom: 80px solid #00ef04;
+    border-right: 80px solid transparent;
+    border-left: 80px solid transparent;
+    transform: rotate(90deg);
+    z-index: -2;
+  }
+</style>

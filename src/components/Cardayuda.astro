@@ -6,8 +6,8 @@ const {nombre, cargo, img, bandera} = Astro.props;
 
 <article>
   <div>
-    <div>
-      <img src={URL_BASE + "img/comerciales/"+img+".webp"} alt="">
+    <div class="w-4/5 mx-auto">
+      <img loading="lazy" src={URL_BASE + "img/comerciales/"+img+".webp"} alt="">
     </div>
   </div>
   <div class="text-center mt-10">
@@ -20,7 +20,7 @@ const {nombre, cargo, img, bandera} = Astro.props;
   </div>
   <div class="mt-6">
     <div class="w-fit mx-auto">
-      <img src={URL_BASE + "img/banderas/"+bandera+".webp"} alt={"Bandera de "+bandera}>
+      <img loading="lazy" src={URL_BASE + "img/banderas/"+bandera+".webp"} alt={"Bandera de "+bandera}>
     </div>
   </div>
 </article>
