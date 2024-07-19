@@ -1,27 +1,36 @@
 ---
 import { URL_BASE } from "../constans";
+import Titulo from "../components/Titulo.astro";
 ---
 
-<section class="-mt-96">
-  <div class="max-w-[1200px] mx-auto p-2">
+<section>
+  <div class="max-w-[1000px] mx-auto p-2">
     <div class="text-center">
-      <h2 class="font-bold text-4xl lg:text-6xl text-morado-market">¿DÓNDE ESTAS TÚ?</h2>
+      <Titulo> ¿DÓNDE ESTAS TÚ? </Titulo>
       <div class="text-gray-texto mt-8">
-        <h3 class="font-bold text-3xl">
+        <h3 class="font-bold text-4xl">
           Ubícate dentro del mapa y dá el primer paso
         </h3>
-        <p class="text-xl mt-4 font-semibold">
+        <p class="text-2xl mt-4 font-semibold">
           necesitas entrenarte para empezar a organizar tu negocio, ¡nadie más
           lo va a hacer por ti!
         </p>
       </div>
     </div>
     <div class="mt-10">
-      <div class="border-2 border-morado-market p-6 lg:p-12 pb-24 rounded-3xl bg-white">
-        <img loading="lazy" src={URL_BASE + "img/mapa.webp"} alt="Mapa ¿Donde estas tu?" />
+      <div
+        class="border-2 border-morado-market p-6 lg:p-12 lg:pb-24 rounded-3xl bg-white"
+      >
+        <img
+          loading="lazy"
+          src={URL_BASE + "img/mapa.webp"}
+          alt="Mapa ¿Donde estas tu?"
+        />
       </div>
       <div class="-mt-12">
-        <div class="w-fit mx-auto bg-morado-market text-white py-3 px-6 rounded-full">
+        <div
+          class="w-fit mx-auto bg-morado-market text-white py-3 px-6 rounded-full"
+        >
           <p class="font-semibold text-xl lg:text-3xl text-center">
             ¡ADUEÑATE DE TU PROCESO<br />
             Y PRIMERO ENTRENATE!

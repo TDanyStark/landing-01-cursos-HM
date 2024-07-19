@@ -1,13 +1,14 @@
 ---
 import Testimonio from "../components/Testimonio.astro";
+import Titulo from "../components/Titulo.astro";
+
+import { URL_BASE } from "../constans";
 ---
 
 <section>
-  <div class="max-w-[1200px] mx-auto p-2">
-    <div>
-      <h2 class="font-bold text-4xl lg:text-6xl text-morado-market text-center">
-        CONOCE PERSONAS QUE HAN TRABAJADO CON NOSOTROS
-      </h2>
+  <div class="max-w-[1100px] mx-auto p-2">
+    <div class="text-center">
+      <Titulo> CONOCE PERSONAS QUE HAN TRABAJADO CON NOSOTROS </Titulo>
     </div>
     <div class="flex flex-col lg:flex-row gap-8 mt-16">
       <Testimonio />
@@ -15,11 +16,25 @@ import Testimonio from "../components/Testimonio.astro";
       <Testimonio />
     </div>
 
-    <div class="my-20 lg:my-44">
-      <p class="text-center font-semibold text-2xl lg:text-5xl text-morado-market lg:leading-[4rem]">
-        <span class="font-extrabold">SE PARTE DE ESTA CRECIENTE COMUNIDAD DE MARKETEROS EN LATINOAMÉRICA Y
-        ESTADOS UNIDOS</span> Y ADUEÑATE DE TU PROCESO DE EVOLUCIÓN.
-      </p>
+    <div class="my-32 lg:mt-64">
+      <div class="flex flex-col lg:flex-row gap-12 border-2 border-morado-market p-4 lg:p-8 rounded-3xl">
+        <div class="basis-[60%]">
+          <p
+            class="text-center lg:text-right font-semibold text-2xl lg:text-4xl text-morado-market lg:leading-[3rem]"
+          >
+            <span class="font-extrabold">
+              SE PARTE DE ESTA CRECIENTE COMUNIDAD DE MARKETEROS EN
+              LATINOAMÉRICA Y ESTADOS UNIDOS
+            </span> 
+              Y ADUEÑATE DE TU PROCESO DE EVOLUCIÓN.
+          </p>
+        </div>
+        <div class="basis-[40%] relative">
+          <div class="lg:absolute lg:bottom-0 lg:-right-24">
+            <img src={URL_BASE + "img/bandera.webp"} alt="Bandera de Hello Marketeros" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

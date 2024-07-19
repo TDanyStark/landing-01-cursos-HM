@@ -1,5 +1,4 @@
 ---
-const {fontsize = 'text-4xl' } = Astro.props;
 import { URL_WEB_CHECKOUT, CheckoutProducto } from "../constans";
 
 const URL = URL_WEB_CHECKOUT + CheckoutProducto;
@@ -9,7 +8,7 @@ const URL = URL_WEB_CHECKOUT + CheckoutProducto;
   href={URL}
   target="_blank"
   rel="noopener"
-  class=`${fontsize} inline-block px-5 py-2 text-morado-market transition-colors duration-150 bg-verde-market rounded-full focus:shadow-outline font-bold`
+  class="text-2xl ld:text-4xl inline-block px-5 py-2 text-morado-market transition-colors duration-150 bg-verde-market rounded-full focus:shadow-outline font-bold"
 >
-  <slot />
+  ¡Inscríbete ahora!
 </a>

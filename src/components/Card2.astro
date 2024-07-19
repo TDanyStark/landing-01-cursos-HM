@@ -4,19 +4,23 @@ import { URL_BASE } from "../constans";
 const { img, subtitulo, copy } = Astro.props;
 ---
 
-<article class="p-8 flex flex-col lg:flex-row justify-between xl:w-[80%] mx-auto gap-8 lg:gap-16">
-  <div class="basis-3/5">
+<article
+  class="p-8 flex flex-col lg:flex-row justify-between xl:w-[80%] mx-auto gap-8 lg:gap-16"
+>
+  <div class="basis-3/5 my-auto">
     <div>
       <img
         src={URL_BASE + "img/modulos/" + img + ".webp"}
         alt="Imagen de la tarjeta"
-        class="w-full"
+        width="492"
+        height="212"
+        class="max-w-full h-auto"
         loading="lazy"
       />
     </div>
   </div>
-  <div class="basis-2/5 my-auto">
-    <div >
+  <div class="basis-2/5">
+    <div>
       <p class="text-gray-texto mt-6 text-xl font-semibold" set:html={copy} />
     </div>
   </div>

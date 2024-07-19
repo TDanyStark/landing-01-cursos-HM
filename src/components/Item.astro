@@ -1,14 +1,16 @@
 ---
 import { URL_BASE } from "../constans"
 
-const {img} = Astro.props;
+const {img, color, colorText} = Astro.props;
 ---
 
-<li class="flex gap-6 items-center">
-  <div class="min-w-16">
-    <img src={URL_BASE + "iconos/"+img+".webp"} alt="Icono">
+<li class="flex flex-col lg:flex-row" style=`background-color: ${color}; color: ${colorText};` ;>
+  <div class="basis-1/2 flex items-center p-16">
+    <p class="font-semibold text-4xl">
+      <slot/>
+    </p>
   </div>
-  <p class="font-semibold text-xl text-gray-texto">
-    <slot/>
-  </p>
+  <div class="basis-1/2">
+    <img width="461" height="307" class="max-w-full h-auto" src={URL_BASE + "iconos/"+img+".webp"} alt="Icono">
+  </div>
 </li>

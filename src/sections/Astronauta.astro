@@ -1,5 +1,6 @@
 ---
 import { URL_BASE } from "../constans";
+import Titulo from "../components/Titulo.astro";
 ---
 
 <section class="-mt-96 lg:-mt-[26rem] overflow-hidden relative z-10">
@@ -7,18 +8,27 @@ import { URL_BASE } from "../constans";
     <div class="flex flex-col lg:flex-row">
       <div class="basis-1/2">
         <div class="relative z-10">
-          <img loading="lazy" src={URL_BASE + "img/astronauta.webp"} alt="Astronauta" />
+          <img
+            loading="lazy"
+            src={URL_BASE + "img/astronauta.webp"}
+            alt="Astronauta"
+          />
         </div>
       </div>
       <div class="basis-1/2 flex flex-col justify-end py-8">
-        <h2 class="text-5xl lg:text-6xl p-4 lg:p-12 text-morado-market font-extrabold">
-          ¡ESTE CURSO <br/> ES PARA TI!
-        </h2>
-        <div id="cuadromorado" class="bg-morado-market shadow-md shadow-rosado-market/50 p-4 lg:p-12 lg:rounded-br-full lg:rounded-tr-[4000px] relative">
+        <div class="p-4 lg:p-12">
+          <Titulo>
+            ¡ESTE CURSO <br /> ES PARA TI!
+          </Titulo>
+        </div>
+        <div
+          id="cuadromorado"
+          class="bg-morado-market shadow-md shadow-rosado-market/50 p-4 lg:p-12 lg:rounded-br-full lg:rounded-tr-[4000px] relative"
+        >
           <p class="text-white text-2xl leading-10">
             Eres un emprendedor, dueño de negocio o de una marca y quieres
-            aumentar tu conocimiento sobre ¿cómo entrar en el mundo digital? <span
-              class="font-bold">¡estás en el lugar indicado!</span>
+            aumentar tu conocimiento sobre ¿cómo entrar en el mundo digital?
+            <span class="font-bold"> ¡estás en el lugar indicado! </span>
           </p>
         </div>
       </div>

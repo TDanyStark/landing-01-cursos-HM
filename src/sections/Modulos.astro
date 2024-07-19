@@ -1,5 +1,7 @@
 ---
 import Card2 from "../components/Card2.astro";
+import Titulo from "../components/Titulo.astro";
+import { URL_BASE } from "../constans";
 
 const modulos = [
   {
@@ -28,10 +30,10 @@ const modulos = [
 
 <section class="pb-44">
   <div class="max-w-[1200px] mx-auto p-2">
-    <div>
-      <h2 class="text-center font-bold text-4xl lg:text-6xl text-morado-market">
+    <div class="text-center">
+      <Titulo>
         DESCUBRE LO QUE APRENDERÁS EN NUESTROS 5 POTENTES MÓDULOS:
-      </h2>
+      </Titulo>
     </div>
     <div class="mt-24">
       <div class="modulos">
@@ -40,6 +42,11 @@ const modulos = [
             <Card2 img={index + 1} subtitulo={modulo.subtitulo} copy={modulo.parrafo}/>
           ))
         }
+      </div>
+    </div>
+    <div class="mt-24">
+      <div class="flex justify-center">
+        <img width="700" height="307" class="max-w-full h-auto" src={URL_BASE + "img/modulos/modulos.webp"} alt="Imagen con todos los modulos">
       </div>
     </div>
   </div>

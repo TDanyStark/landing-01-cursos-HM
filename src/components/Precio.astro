@@ -1,19 +1,21 @@
 ---
 import { URL_BASE } from "../constans"
+import Calltoaction from "./Calltoaction.astro"
 ---
 
-<div class="relative z-10">
+<div class="relative z-10 p-2">
   <div class="max-w-[1200px] mx-auto">
-    <div class="text-morado-market text-4xl lg:text-6xl">
+    <div class="text-morado-market text-3xl lg:text-5xl">
       <h3 class="font-semibold text-center">CURSO VALORADO EN:</h3>
       <h2 class="text-center font-bold"><span class="relative ribbow-price">497 USD</span></h2>
     </div>
-    <div class="mt-8">
-      <div class="w-2/4 mx-auto">
+    <div class="mt-8 flex justify-center">
         <div class="md:-mr-20">
-          <img loading="lazy" class="w-full" src={URL_BASE + "img/oferta.webp"} alt="Imagen con la oferta">
+          <img loading="lazy" width="400" height="285" class="max-w-full h-auto" src={URL_BASE + "img/oferta.webp"} alt="Imagen con la oferta">
         </div>
-      </div>
+    </div>
+    <div class="mt-24 flex justify-center">
+      <Calltoaction />
     </div>
   </div>
 </div>

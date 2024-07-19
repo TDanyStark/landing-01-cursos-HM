@@ -3,7 +3,7 @@ import Precio from "../components/Precio.astro";
 
 import Itemsandy from "../components/Itemsandy.astro";
 import { URL_BASE } from "../constans";
-import Calltoaction from "../components/Calltoaction.astro";
+import Titulo from "../components/Titulo.astro";
 
 const itemssandylist = [
   "Esposa de Camilo, mamá de Fede y Majo.",
@@ -20,26 +20,24 @@ const itemssandylist = [
 ];
 ---
 
-<section class="py-52">
+<section class="py-24">
   <Precio />
 
-  <div class="max-w-[1200px] mx-auto mt-44 p-2">
+  <div class="max-w-[1200px] mx-auto mt-24 p-2">
     <div class="flex flex-col lg:flex-row gap-8">
       <div>
         <img loading="lazy" src={URL_BASE + "img/sandy.webp"} alt="Foto de sandy baron" />
       </div>
       <div class="h-fit my-auto">
-        <h2
-          class="font-bold text-4xl lg:text-6xl text-morado-market text-center lg:text-left"
-        >
+        <Titulo>
           ¿QUIÉN ES <br />SANDY BARÓN?
-        </h2>
-        <ul class="lista-quien-es-sandy text-base text-gray-texto mt-8">
+        </Titulo>
+        <ul class="lista-quien-es-sandy text-gray-texto mt-8 text-xl font-semibold">
           {itemssandylist.map((item) => <Itemsandy>{item}</Itemsandy>)}
         </ul>
       </div>
     </div>
-    <div class="mt-8 text-gray-texto">
+    <div class="mt-8 text-gray-texto text-xl leading-9 font-semibold">
       <p>
         Sandy Barón, fundadora y líder visionaria de Market Support, Market
         Support Miami y Arepa Station, ha transformado la publicidad en un motor
@@ -61,13 +59,6 @@ const itemssandylist = [
         aquellas marcas que han confiado en ella y en sus agencias de
         publicidad.
       </p>
-    </div>
-
-    <div class="mt-20">
-      <Calltoaction fontsize="text-xl lg:text-3xl text-center">
-        No esperes más! No pierdas mas tiempo Inscríbete ahora y comienza a
-        transformar tu negocio.
-      </Calltoaction>
     </div>
   </div>
 </section>

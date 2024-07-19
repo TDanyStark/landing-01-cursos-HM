@@ -1,42 +1,47 @@
 ---
-import Calltoaction from "../components/Calltoaction.astro";
 import Item from "../components/Item.astro";
+import Titulo from "../components/Titulo.astro";
 
 const items = [
   {
     title: "Acceso a los 5 módulos de entrenamiento",
+    color: "#692292",
+    colorText: "white",
   },
   {
     title: "5 Materiales de apoyo tipo infografía en cada módulo",
+    color: "#c01e8b",
+    colorText: "white",
   },
   {
-    title: "5 recursos descargables para que pongas en práctica lo aprendido (WORKSHOP)",
+    title:
+      "5 recursos descargables para que pongas en práctica lo aprendido (WORKSHOP)",
+    color: "#ed79aa",
+    colorText: "white",
   },
   {
     title: "Ingreso a la plataforma ¡Hello Marketeros! Durante 1 año",
+    color: "#01de00",
+    colorText: "#692292",
   },
   {
-    title: "Conversatorios virtuales de la Comunidad Hello Marketeros"
-  }
-]
-
+    title: "Conversatorios virtuales de la Comunidad Hello Marketeros",
+    color: "#692292",
+    colorText: "#01de00",
+  },
+];
 ---
 
-<section class="-mt-20 lg:-mt-44 pt-44 lg:pt-[300px] pb-[500px] bg-lila-fondo">
+<section class="bg-lila-fondo my-24 py-16 lg:my-44 lg:py-24">
   <div class="max-w-[1000px] mx-auto p-2">
-    <div class="flex justify-center">
-      <Calltoaction fontsize="text-2xl lg:text-3xl text-center">
-        COMPRA TU PRIMER CURSO AQUI
-      </Calltoaction>
-    </div>
-    <div class="mt-20">
-      <h2 class="text-center text-4xl lg:text-6xl font-bold text-morado-market">¿QUÉ INCLUYE NUESTRO CURSO?</h2>
-      <ul class="w-fit mx-auto mt-20 flex flex-col gap-8">
+    <div>
+      <div class="text-center">
+        <Titulo> ¿QUÉ INCLUYE NUESTRO CURSO? </Titulo>
+      </div>
+      <ul class="w-fit mx-auto mt-20 flex flex-col gap-1">
         {
           items.map((item, index) => (
-            <Item img={"icono"+(index+1)}>
-              {item.title}
-            </Item>
+            <Item img={(index + 1)} color={item.color} colorText={item.colorText}>{item.title}</Item>
           ))
         }
       </ul>
