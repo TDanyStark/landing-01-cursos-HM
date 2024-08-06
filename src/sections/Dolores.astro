@@ -6,26 +6,32 @@ const dolores = [
   {
     color: "#692394",
     Text: "¿te preguntas… en qué momento aprenderé tanto de marketing digital para lograr sacar mi negocio adelante?",
+    emogi: "😖",
   },
   {
     color: "#c21f8c",
     Text: "¿Estás luchando con campañas que no generan resultados?",
+    emogi: "😩",
   },
   {
     color: "#c21f8c",
     Text: "¿Quisieras contratar a alguien para que te haga el marketing, pero no sabes qué competencias debe tener esta persona para que funcione en tu proyecto?",
+    emogi: "🤔",
   },
   {
     color: "#00ef04",
     Text: "¿Te sientes abrumado por la competencia, el bombardeo de información en redes sociales y las constantes actualizaciones del marketing digital?",
+    emogi: "😰",
   },
   {
     color: "#692394",
     Text: "¿Te falta tiempo para aprender y aplicar nuevas estrategias a tu negocio?",
+    emogi: "😓",
   },
   {
     color: "#c21f8c",
     Text: "¿Tu empresa está perdiendo clientes porque no logras enfocarte en las ventas?",
+    emogi: "😕",
   },
 ];
 
@@ -41,7 +47,7 @@ const dolores = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 p-2 mt-12">
       {
         dolores.map((dolor, index) => (
-          <Card1 color={dolor.color} key={index}>{dolor.Text}</Card1>
+          <Card1 color={dolor.color} key={index} emogi={dolor.emogi}>{dolor.Text}</Card1>
         ))
       }
     </div>

@@ -1,0 +1,80 @@
+---
+const modulos = [
+  {
+    modulo: "Módulo 1: Cómo construir una propuesta de valor que venda sola.",
+    secciones: [
+      "Construcción de marcas desde cero",
+      "Creación de una propuesta de valor",
+      "Infografía: Para empezar, debemos hablar el mismo idioma",
+      "Taller Practico: Construye tu marca"
+    ]
+  },
+  {
+    modulo: "Módulo 2: Secretos de las grandes compañías: Oportunidad, Propósito, Segmentación y Comprador.",
+    secciones: [
+      "Identificar oportunidades de negocio",
+      "Propósito de las marcas",
+      "Identifique su Buyer Persona",
+      "Claves para Segmentar su negocio",
+      "Infografía: 10 claves para identificar oportunidades de negocio",
+      "Taller Practico: Construye tu Buyer Persona"
+    ]
+  },
+  {
+    modulo: "Módulo 3: Aprende: cómo, cuándo, cuanto, dónde y por qué invertir en publicidad.",
+    secciones: [
+      "Una lección de vida",
+      "Mirada a la contabilidad",
+      "Mirada a las finanzas",
+      "Entendimiento de un Plan de Negocios VS Plan de Marketing",
+      "Infografía: Marketing digital, el hilo rojo que une tu marca con tu audiencia",
+      "Taller Practico: Tablero de control"
+    ]
+  },
+  {
+    modulo: "Módulo 4: Sumérgete en un ecosistema digital con oxigeno extra.",
+    secciones: [
+      "Puntos clave dentro de un ecosistema digital",
+      "Coherencia y consistencia",
+      "Pasos de un correcto Plan de Marketing",
+      "Pasos para desarrollar una marca",
+      "Teorías",
+      "Infografía: El paso a paso para convertir una idea en realidad",
+      "Taller Practico: Define los objetivos que harán brillar a tu marca"
+    ]
+  },
+  {
+    modulo: "Módulo 5: Se gana o se aprende, pero nunca se pierde: casos de éxito y alertas.",
+    secciones: [
+      "Caso de éxito de una Marca Personal",
+      "9 errores que Ud. no debe cometer",
+      "Caso de éxito de una Marca tipo franquicia",
+      "Teoría Marketera",
+      "Infografía: 9 errores que atentan contra la vida de un proyecto de negocio",
+      "Taller Practico: Construye una marca con personalidad"
+    ]
+  },
+];
+
+import CardModulos from '../components/CardModulos.astro'
+---
+
+<section class="py-24 lg:py-44">
+  <div class="max-w-[1000px] mx-auto p-2">
+    <div class="text-center max-w-[700px] mx-auto">
+      <p class="text-verde-market font-bold text-lg">
+        TEMARIO DEL CURSO
+      </p>
+      <h2 class="text-4xl font-semibold">
+        Esto es lo que aprenderás sobre automatización y funnels
+      </h2>
+    </div>
+    <div class="flex flex-col gap-8 mt-16">
+      {
+        modulos.map((modulo) => (
+          <CardModulos modulo={modulo} />
+        ))
+      }
+    </div>
+  </div>
+</section>

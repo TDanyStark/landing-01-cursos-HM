@@ -1,0 +1,54 @@
+---
+import Testimonio from "../components/Testimonio.astro";
+import Titulo from "../components/Titulo.astro";
+
+import { URL_BASE } from "../constans";
+
+const logos = [
+  {
+    src: URL_BASE + "img/logos/Abbott.webp",
+    alt: "Abbott",
+  },
+  {
+    src: URL_BASE + "img/logos/bussie.webp",
+    alt: "Bussie",
+  },
+  {
+    src: URL_BASE + "img/logos/ccc.webp",
+    alt: "ccc",
+  },
+  {
+    src: URL_BASE + "img/logos/ecopetrol.webp",
+    alt: "ecopetrol",
+  },
+  {
+    src: URL_BASE + "img/logos/Suiphar.webp",
+    alt: "Suiphar",
+  },
+  {
+    src: URL_BASE + "img/logos/unilever.webp",
+    alt: "unilever",
+  },
+  {
+    src: URL_BASE + "img/logos/VMware.webp",
+    alt: "VMware",
+  },
+];
+---
+
+<section class="bg-morado-market py-12">
+  <div class="max-w-[1100px] mx-auto p-2">
+    <div class="text-center">
+      <h2 class="text-white text-4xl font-bold"> CONOCE MARCAS QUE HAN TRABAJADO CON NOSOTROS </h2>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 justify-stretch gap-8 mt-16">
+      {
+        logos.map((logo) => (
+          <div class="flex items-center justify-center overflow-hidden max-h-24 rounded-3xl bg-white shadow-md p-4">
+            <img src={logo.src} alt={logo.alt} class="object-contain w-full h-full" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
