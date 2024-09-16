@@ -1,6 +1,7 @@
 ---
 import Testimonio from "../components/Testimonio.astro";
 import Titulo from "../components/Titulo.astro";
+import Logos from "./Logos.astro";
 
 import { URL_BASE } from "../constans";
 
@@ -33,7 +34,36 @@ const logos = [
     src: URL_BASE + "img/logos/VMware.webp",
     alt: "VMware",
   },
+  {
+    src: URL_BASE + "img/logos/ecopetrol.webp",
+    alt: "ecopetrol",
+  },
+  {
+    src: URL_BASE + "img/logos/Suiphar.webp",
+    alt: "Suiphar",
+  },
+  {
+    src: URL_BASE + "img/logos/unilever.webp",
+    alt: "unilever",
+  },
+  {
+    src: URL_BASE + "img/logos/VMware.webp",
+    alt: "VMware",
+  },
+  {
+    src: URL_BASE + "img/logos/Suiphar.webp",
+    alt: "Suiphar",
+  },
+  {
+    src: URL_BASE + "img/logos/unilever.webp",
+    alt: "unilever",
+  },
+  {
+    src: URL_BASE + "img/logos/VMware.webp",
+    alt: "VMware",
+  },
 ];
+
 ---
 
 <section class="bg-morado-market py-12">
@@ -41,7 +71,7 @@ const logos = [
     <div class="text-center">
       <h2 class="text-white text-4xl font-bold"> CONOCE MARCAS QUE HAN TRABAJADO CON NOSOTROS </h2>
     </div>
-    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 justify-stretch gap-8 mt-16">
+    <!-- <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 justify-stretch gap-8 mt-16">
       {
         logos.map((logo) => (
           <div class="flex items-center justify-center overflow-hidden max-h-24 rounded-3xl bg-white shadow-md p-4">
@@ -49,6 +79,7 @@ const logos = [
           </div>
         ))
       }
-    </div>
+    </div> -->
+    <Logos logos={logos} width="100px" height="50px" />
   </div>
 </section>
