@@ -1,0 +1,32 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+import { URL_BASE } from "../../constans";
+
+const motivos = [
+  "Un emprendedor que está organizando su negocio y se siente a punto de ahogarse en el océano de información",
+  "Un empresario que se siente orgulloso del crecimiento de su negocio pero necesita una guía para hacerlos crecer más",
+  "Un entusiasta que valora su tiempo y necesita encontrar en un solo lugar las técnicas del marketing digital que funcionan en el mundo empresarial real",
+];
+---
+
+<section class="py-20 bg-morado-market px-2">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="text-center">
+      <Titulo color="text-white">Hello Marketeros no es para todo el mundo, es solo para ti, que eres:</Titulo>
+    </div>
+    <div class="mt-16 grid lg:grid-cols-3 gap-8">
+      {
+        motivos.map((motivo) => (
+        <div class=" bg-white rounded-lg p-6 shadow-md space-y-3">
+          <div class="text-green-500">
+            <Check />
+          </div>
+          <p class="text-gray-800 text-2xl font-semibold">{motivo}</p>
+        </div>
+      ))
+      }
+    </div>
+  </div>
+</section>

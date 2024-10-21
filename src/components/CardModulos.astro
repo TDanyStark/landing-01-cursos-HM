@@ -2,18 +2,18 @@
 const { modulo } = Astro.props;
 ---
 
-<article class="p-4 rounded-3xl border border-gray-200">
-  <p class="font-bold text-xl">
+<article class="p-8 rounded-3xl border border-morado-market">
+  <p class="font-bold text-2xl">
     {modulo.modulo}
   </p>
   <div class="mt-4">
     <ul>
       {
         modulo.secciones.map((item: string) => (
-          <li class="relative pl-6 ml-6">
+          <li class="relative pl-10 ml-6 text-xl">
             <span class="absolute left-0 top-0 h-full flex items-center">
-            ✅
-          </span>
+              ✅
+            </span>
             {item}
           </li>
         ))

@@ -1,0 +1,125 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+import { URL_BASE } from "../../constans";
+import Subtituloh3 from "../../components/Subtituloh3.astro";
+import Cardayuda from "../../components/Cardayuda.astro";
+import Calltoaction from "../../components/Calltoaction.astro";
+
+const faqData = [
+  {
+    question: "¿El acceso a la plataforma es ilimitada?",
+    answer:
+      "Tendrás acceso durante un año, a partir de la fecha en que te registres.",
+  },
+  {
+    question: "¿Cómo accedo a los cursos?",
+    answer:
+      "Una vez completes la inscripción al curso que elijas, podrás acceder a todos sus contenidos a través de un usuario y contraseña que crearás en la plataforma. Recibirás un instructivo para que el proceso sea lo más sencillo posible para ti.",
+  },
+  {
+    question: "¿Necesito tener conocimientos previos para acceder a los cursos de Hello Marketeros?",
+    answer:
+      "No. Nuestros cursos están diseñados para que aprendas desde cero todos los conceptos, técnicas y estrategias del marketing digital.",
+  }
+];
+
+---
+
+<section class="py-20 bg-morado-market px-2">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="text-center">
+      <Titulo color="text-white">¿Tienes dudas?</Titulo>
+    </div>
+    <div class="mt-12">
+      <p class="text-3xl text-gray-100 text-center">
+        Es normal que tengas preguntas sobre la plataforma Hello Marketeros y
+        los cursos que puedes encontrar allí, por eso, tenemos las respuestas a
+        las dudas más frecuentes.
+      </p>
+    </div>
+    <div class="max-w-[700px] mx-auto mt-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="accordion-group space-y-4" data-accordion="default-accordion">
+          {
+            faqData.map(({ question, answer }, index) => (
+              <article
+                class="accordion py-8 px-6  transition-all duration-500 rounded-2xl bg-white accordion-active:bg-white"
+                id={`basic-heading-${index}`}
+              >
+                <button
+                  class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-morado-market accordion-active:text-morado-market"
+                  aria-controls={`basic-collapse-${index}`}
+                >
+                  <h5 class="text-2xl text-morado-market font-semibold">{question}</h5>
+                  <svg
+                    class="text-gray-500 transition min-w-6 duration-500 group-hover:text-morado-market accordion-active:text-morado-market"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id={`basic-collapse-${index}`}
+                  class="accordion-content w-full px-0 overflow-hidden pt-4"
+                  aria-labelledby={`basic-heading-${index}`}
+                  style="max-height: 0; transition: max-height 0.5s ease;"
+                >
+                  <p class="text-xl text-gray-800">{answer}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="mt-16">
+      <div class="text-center">
+        <p class="text-3xl text-white">
+          Pero, como en todo aprendizaje, puede haber otras dudas, que puedes resolver con nuestra asesora.
+        </p>
+      </div>
+      <div class="flex justify-center mt-12">
+        <Cardayuda
+          nombre="Leidy Poveda"
+          cargo="Key Account Manager"
+          img="leidy"
+        />
+          
+      </div>
+    </div>
+    <div class="mt-16 flex justify-center">
+      <Calltoaction />
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const accordions = document.querySelectorAll(".accordion-toggle");
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight === content.scrollHeight + "px") {
+        content.style.maxHeight = 0;
+        this.querySelector("svg").classList.remove("rotate-180");
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        this.querySelector("svg").classList.add("rotate-180");
+      }
+    });
+  });
+});
+</script>

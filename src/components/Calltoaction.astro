@@ -1,14 +1,55 @@
 ---
 import { URL_WEB_CHECKOUT, CheckoutProducto } from "../constans";
 
-const URL = URL_WEB_CHECKOUT + CheckoutProducto;
+const URL_WEB = URL_WEB_CHECKOUT + CheckoutProducto;
+
+interface Props {
+  title?: string;
+  url?: string;
+}
+
+const { title, url } = Astro.props;
+
+const URL_CALLTOACTION = url || URL_WEB;
+const TITLE_CALLTOACTION =
+  title ||
+  "¡Quiero entrenarme para no enterrarme en el mundo del marketing digital!";
 ---
 
-<a
-  href={URL}
-  target="_blank"
-  rel="noopener"
-  class="text-2xl ld:text-4xl inline-block px-5 py-2 text-morado-market transition-colors duration-150 bg-verde-market rounded-full focus:shadow-outline font-bold"
->
-  ¡Inscríbete ahora!
-</a>
+<div id="contenedorpulse" class="relative w-fit">
+  <div id="calltoactionpulse" class="absolute z-10 inset-0 bg-green-500 rounded">
+  </div>
+  <a
+    href={URL_CALLTOACTION}
+    target="_blank"
+    rel="noopener"
+    id="calltoaction"
+    class="relative z-20 text-3xl ld:text-5xl inline-block text-center px-5 py-4 bg-green-500 text-white rounded"
+  >
+    {TITLE_CALLTOACTION}
+  </a>
+</div>
+
+<!-- agrega un efecto pulse a #calltoaction -->
+
+<style>
+  #contenedorpulse #calltoactionpulse {
+    animation: pulse 2s infinite;
+  }
+
+  #contenedorpulse:hover #calltoactionpulse {
+    animation-play-state: paused;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01, 1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>

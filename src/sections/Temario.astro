@@ -6,30 +6,32 @@ const modulos = [
       "Construcción de marcas desde cero",
       "Creación de una propuesta de valor",
       "Infografía: Para empezar, debemos hablar el mismo idioma",
-      "Taller Practico: Construye tu marca"
-    ]
+      "Taller Practico: Construye tu marca",
+    ],
   },
   {
-    modulo: "Módulo 2: Secretos de las grandes compañías: Oportunidad, Propósito, Segmentación y Comprador.",
+    modulo:
+      "Módulo 2: Secretos de las grandes compañías: Oportunidad, Propósito, Segmentación y Comprador.",
     secciones: [
       "Identificar oportunidades de negocio",
       "Propósito de las marcas",
       "Identifique su Buyer Persona",
       "Claves para Segmentar su negocio",
       "Infografía: 10 claves para identificar oportunidades de negocio",
-      "Taller Practico: Construye tu Buyer Persona"
-    ]
+      "Taller Practico: Construye tu Buyer Persona",
+    ],
   },
   {
-    modulo: "Módulo 3: Aprende: cómo, cuándo, cuanto, dónde y por qué invertir en publicidad.",
+    modulo:
+      "Módulo 3: Aprende: cómo, cuándo, cuanto, dónde y por qué invertir en publicidad.",
     secciones: [
       "Una lección de vida",
       "Mirada a la contabilidad",
       "Mirada a las finanzas",
       "Entendimiento de un Plan de Negocios VS Plan de Marketing",
       "Infografía: Marketing digital, el hilo rojo que une tu marca con tu audiencia",
-      "Taller Practico: Tablero de control"
-    ]
+      "Taller Practico: Tablero de control",
+    ],
   },
   {
     modulo: "Módulo 4: Sumérgete en un ecosistema digital con oxigeno extra.",
@@ -40,41 +42,54 @@ const modulos = [
       "Pasos para desarrollar una marca",
       "Teorías",
       "Infografía: El paso a paso para convertir una idea en realidad",
-      "Taller Practico: Define los objetivos que harán brillar a tu marca"
-    ]
+      "Taller Practico: Define los objetivos que harán brillar a tu marca",
+    ],
   },
   {
-    modulo: "Módulo 5: Se gana o se aprende, pero nunca se pierde: casos de éxito y alertas.",
+    modulo:
+      "Módulo 5: Se gana o se aprende, pero nunca se pierde: casos de éxito y alertas.",
     secciones: [
       "Caso de éxito de una Marca Personal",
       "9 errores que Ud. no debe cometer",
       "Caso de éxito de una Marca tipo franquicia",
       "Teoría Marketera",
       "Infografía: 9 errores que atentan contra la vida de un proyecto de negocio",
-      "Taller Practico: Construye una marca con personalidad"
-    ]
+      "Taller Practico: Construye una marca con personalidad",
+    ],
   },
 ];
 
-import CardModulos from '../components/CardModulos.astro'
+import Calltoaction from "../components/Calltoaction.astro";
+import CardModulos from "../components/CardModulos.astro";
+
+import { URL_BASE } from "../constans";
+
 ---
 
-<section class="py-24 lg:py-44">
-  <div class="max-w-[1000px] mx-auto p-2">
-    <div class="text-center max-w-[700px] mx-auto">
-      <p class="text-verde-market font-bold text-lg">
-        TEMARIO DEL CURSO
-      </p>
-      <h2 class="text-4xl font-semibold">
-        Esto es lo que aprenderás sobre Marketing
-      </h2>
+<section class="py-12 lg:py-24">
+  <div class="max-w-[1100px] mx-auto p-2">
+    <div class="text-center max-w-[900px] mx-auto">
+      <p class="text-rosado-market font-bold text-xl">TEMARIO DEL CURSO</p>
+      <h3 class="text-4xl font-semibold">
+        En nuestro primer curso aprenderás los aspectos imprescindibles del
+        marketing digital que todo emprendedor o empresario debe conocer:
+      </h3>
     </div>
     <div class="flex flex-col gap-8 mt-16">
-      {
-        modulos.map((modulo) => (
-          <CardModulos modulo={modulo} />
-        ))
-      }
+      {modulos.map((modulo) => <CardModulos modulo={modulo} />)}
+    </div>
+    <div class="mt-16 flex justify-center">
+      <div class="text-center">
+        <p class="text-4xl font-semibold">Curso valorado en <span class="block text-red-600 line-through">150 USD</span></p>
+        <p class="text-6xl font-semibold mt-4">Oferta de lanzamiento <span class="block font-bold text-green-500 text-7xl">50 USD</span></p>
+        <div class="flex flex-col items-center mt-12">
+          <img  src={URL_BASE + "img/creditcard.webp"} alt="Tarjetas aceptadas">
+          <span class="text-xl font-semibold">Pago seguro por Stripe</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 flex justify-center">
+      <Calltoaction />
     </div>
   </div>
 </section>

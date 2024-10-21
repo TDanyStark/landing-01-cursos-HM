@@ -1,0 +1,50 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+import { URL_BASE } from "../../constans";
+
+const marcas = [
+  {
+    name: "Abrilar",
+    logo: `${URL_BASE}img/marcas/abrilar.webp`,
+  },
+  {
+    name: "Baby Dove",
+    logo: `${URL_BASE}img/marcas/babydove.webp`,
+  },
+  {
+    name: "Jabon Coco",
+    logo: `${URL_BASE}img/marcas/coco.webp`,
+  },
+  {
+    name: "Ensoy",
+    logo: `${URL_BASE}img/marcas/ensoy.webp`,
+  },
+  {
+    name: "Pedialyte",
+    logo: `${URL_BASE}img/marcas/pedialyte.webp`,
+  },
+  {
+    name: "Sedal",
+    logo: `${URL_BASE}img/marcas/sedal.webp`,
+  }
+];
+---
+
+<section class="py-20 bg-white px-2">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="text-center">
+      <Titulo><span class="bg-verde-market text-morado-market my-px px-3 mx-2 inline-block">Aprenderás</span>con base en la<span class="bg-verde-market text-morado-market my-px mx-2 px-3 inline-block">experiencia</span>de haber trabajado directamente para las estrategias de marcas como:</Titulo>
+    </div>
+    <div class="pt-16">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {marcas.map((marca) => (
+          <div class="flex items-center justify-center hover:scale-125 duration-300 transition-transform">
+            <img src={marca.logo} alt={marca.name} class="h-44 object-contain" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

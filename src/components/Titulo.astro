@@ -1,8 +1,14 @@
 ---
 
+interface Props {
+  color?: string;
+}
 
+const { color } = Astro.props;
+
+const colorTitle = color || "text-rosado-market";
 ---
 
-<h2 class="text-4xl lg:text-6xl text-morado-market font-extrabold">
+<h2 class={"font-bold tracking-tighter text-5xl md:text-6xl text-balance md:leading-[1.1] " + colorTitle }>
   <slot />
 </h2>

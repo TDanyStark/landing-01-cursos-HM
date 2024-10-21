@@ -8,31 +8,42 @@ import { URL_BASE } from "../constans";
     class="bg-img"
     style=`background-image: url(${URL_BASE + "img/bg.webp"});`
   >
-    <div
-      class="max-w-[1200px] mx-auto py-8 lg:py-16 flex flex-col lg:flex-row justify-center gap-8 lg:gap-0 px-2"
-    >
-      <div class="basis-[50%] space-y-16">
+    <div class="max-w-[1200px] mx-auto pt-8 lg:pt-16 flex flex-col lg:flex-row justify-center gap-8 lg:gap-0 px-2">
+      <div class="basis-1/2">
         <div class="w-40 h-[116px] lg:w-60 lg:h-[173px]">
           <img
             src={URL_BASE + "img/logohello.webp"}
             alt="Logo Hello marqueteros"
-            width="240" height="174" class="max-w-full h-auto"
+            width="240"
+            height="174"
+            class="max-w-full h-auto"
           />
         </div>
-        <div class="space-y-8">
-          <h1 class="text-morado-market text-4xl leading-[1.2] font-bold text-balance">
-            EL ENTRENAMIENTO <span class="bg-verde-market my-px inline-block rounded-xl px-1">RÁPIDO</span>,</br> <span class="bg-verde-market my-px inline-block rounded-xl px-1">CONCRETO</span> Y <span class="bg-verde-market my-px inline-block rounded-xl px-1">PRECISO</span> PARA APLICAR LAS <span class="bg-verde-market my-px inline-block rounded-xl px-1">TÉCNICAS EXITOSAS</span> DE <span class="bg-verde-market my-px inline-block rounded-xl px-1">MARKETING</span> DE LAS GRANDES COMPAÑÍAS EN EL MUNDO, AHORA EN TU NEGOCIO.
+      </div>
+      <div  class="basis-1/2"></div>
+    </div>
+    <div class="max-w-[1200px] mx-auto py-8 lg:py-10 flex flex-col lg:flex-row justify-center gap-8 px-2">
+      <div class="basis-[55%]">
+        <div class="space-y-6">
+          <p class="text-xl text-gray-700 md:text-2xl">
+            ¿Necesitas introducir el marketing digital a tu negocio, pero no sabes cómo hacerlo?
+          </p>
+          <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.1]">
+            Entra al mundo del marketing digital  
+            <span class="block text-rosado-market">sin perder la cabeza ni el foco en tu negocio</span>
           </h1>
-          <p class="text-3xl font-semibold text-gray-texto text-balance">
-            TE ENTRENAS O TE ENTIERRAS
+          <p class="text-lg text-gray-700 md:text-xl">
+            Estás a un paso de aprender a replicar las técnicas de marketing más exitosas de las grandes compañías del mundo en tu negocio
           </p>
           <Calltoaction />
         </div>
       </div>
-      <div class="basis-[50%] flex items-end">
+      <div class="basis-[45%] flex">
         <div class="w-full">
           <img
-            width="592" height="688" class="max-w-full h-auto lg:-mb-24 xl:-mb-44 sombra"
+            width="592"
+            height="688"
+            class="max-w-full h-auto lg:-mb-24 xl:-mb-44 sombra"
             src={URL_BASE + "img/sandyhero.webp"}
             alt="Imagen de mujer sonriendo con un portatil en la mano"
           />

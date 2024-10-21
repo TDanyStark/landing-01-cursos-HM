@@ -1,9 +1,9 @@
 ---
-import Testimonio from "../components/Testimonio.astro";
-import Titulo from "../components/Titulo.astro";
+import Subtituloh3 from "../components/Subtituloh3.astro";
 import Logos from "./Logos.astro";
 
 import { URL_BASE } from "../constans";
+import Calltoaction from "../components/Calltoaction.astro";
 
 const logos = [
   {
@@ -35,41 +35,36 @@ const logos = [
     alt: "VMware",
   },
   {
-    src: URL_BASE + "img/logos/ecopetrol.webp",
-    alt: "ecopetrol",
+    src: URL_BASE + "img/logos/adium.webp",
+    alt: "Adium",
   },
   {
-    src: URL_BASE + "img/logos/Suiphar.webp",
-    alt: "Suiphar",
+    src: URL_BASE + "img/logos/el-arepazo.webp",
+    alt: "el arepazo",
   },
   {
-    src: URL_BASE + "img/logos/unilever.webp",
-    alt: "unilever",
+    src: URL_BASE + "img/logos/Takeda.webp",
+    alt: "Takeda",
   },
   {
-    src: URL_BASE + "img/logos/VMware.webp",
-    alt: "VMware",
+    src: URL_BASE + "img/logos/Tecnofarma.webp",
+    alt: "Tecnofarma",
   },
   {
-    src: URL_BASE + "img/logos/Suiphar.webp",
-    alt: "Suiphar",
+    src: URL_BASE + "img/logos/TI-724.webp",
+    alt: "TI-724",
   },
   {
-    src: URL_BASE + "img/logos/unilever.webp",
-    alt: "unilever",
-  },
-  {
-    src: URL_BASE + "img/logos/VMware.webp",
-    alt: "VMware",
+    src: URL_BASE + "img/logos/AstraZeneca.webp",
+    alt: "AstraZeneca",
   },
 ];
-
 ---
 
-<section class="bg-morado-market py-12">
+<section class="pb-12">
   <div class="max-w-[1100px] mx-auto p-2">
     <div class="text-center">
-      <h2 class="text-white text-4xl font-bold"> CONOCE MARCAS QUE HAN TRABAJADO CON NOSOTROS </h2>
+      <Subtituloh3> Y para compañias en latam como: </Subtituloh3>
     </div>
     <!-- <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 justify-stretch gap-8 mt-16">
       {
@@ -80,6 +75,18 @@ const logos = [
         ))
       }
     </div> -->
-    <Logos logos={logos} width="100px" height="50px" />
+    <div class="mt-16">
+      <Logos logos={logos} width="200px" height="150px" gap="40px" />
+    </div>
+    <div class="mt-12">
+      <p class="text-gray-800 text-2xl font-semibold text-center">
+        Conoce las estrategias que les permitieron a estas marcas expandir su
+        mercado. Comprende las técnicas más utilizadas por las grandes compañías
+        que tú puedes aplicar al mercado de tu consumidor final.
+      </p>
+    </div>
+    <div class="mt-12 flex justify-center">
+      <Calltoaction />
+    </div>
   </div>
 </section>

@@ -1,0 +1,30 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+const miedos = [
+  "Conocerás de manera clara y sencilla los conceptos básicos que debes entender para llevar tu negocio al siguiente nivel.",
+  "Aprenderás la esencia de las estrategias que han permitido el crecimiento de compañías reconocidas a nivel mundial.",
+  "Aprenderás a reconocer los errores que no debes cometer en tu estrategia de marketing."
+];
+---
+
+<section class="pt-12 pb-[30rem] lg:pt-24 bg-lila-fondo px-2" >
+  <div class="max-w-screen-lg mx-auto">
+    <div class="text-center">
+      <Titulo> Piérdele el miedo al marketing digital </Titulo>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      {
+        miedos.map((miedo) => (
+          <div class=" bg-white rounded-lg p-6 shadow-md space-y-3">
+            <div class="text-green-500">
+              <Check />
+            </div>
+            <p class="text-gray-800 text-2xl font-semibold">{miedo}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -3,6 +3,7 @@ interface Props{
   logos: Logo[];
   width: string;
   height: string;
+  gap: string;
 }
 
 
@@ -12,12 +13,12 @@ interface Logo {
 }
 
 
-const { logos, width, height } = Astro.props;
+const { logos, width, height, gap } = Astro.props;
 const logoCount = logos.length;
 ---
 
 <div class="slider">
-  <div class="slider-track" style={`--logo-count: ${logoCount * 2}; --width-image: ${width}; --height-image: ${height};`}>
+  <div class="slider-track" style={`--logo-count: ${logoCount * 2}; --width-image: ${width}; --height-image: ${height}; --gap:${gap};`}>
     {logos.map((logo: Logo) => (
       <div class="slide" >
         <img style={`--width-image: ${width}; --height-image: ${height};`} src={logo.src} alt={logo.alt} />
@@ -42,10 +43,14 @@ const logoCount = logos.length;
 
   .slider-track {
     display: flex;
-    gap: 15px;
+    gap: var(--gap);
     width: 100%;
     animation: scroll infinite linear;
     animation-duration: calc(1s * var(--logo-count));
+  }
+
+  .slider:hover .slider-track {
+    animation-play-state: paused;
   }
 
   .slide {
@@ -63,7 +68,7 @@ const logoCount = logos.length;
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-1 * var(--width-image) * (var(--logo-count)/2) - 15px * (var(--logo-count)/2)));
+      transform: translateX(calc(-1 * var(--width-image) * (var(--logo-count)/2) - var(--gap) * (var(--logo-count)/2)));
 
     }
   }

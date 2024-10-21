@@ -1,0 +1,32 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+const razones = [
+  "Para mantenerte con vida en el mercado cambiante",
+  "Para llegar a tu audiencia correcta",
+  "Para tomar decisiones acertadas en el momento oportuno",
+  "Para optimizar los recursos de tu inversión",
+  "Para garantizar la expansión de tu negocio"
+];
+---
+
+<section class="py-20 bg-white px-2">
+  <div class="max-w-screen-lg mx-auto">
+    <div class="text-center">
+      <Titulo>Razones por las que debes entrenarte en marketing digital</Titulo>
+    </div>
+    <div class="mt-12 space-y-4 max-w-[750px] mx-auto">
+      {
+        razones.map((miedo) => (
+          <div class="flex gap-4 bg-white rounded-lg p-6 shadow-md space-y-2 border-r-4 hover:border-green-500 hover:scale-105 transition-transform">
+            <div class="text-green-500">
+              <Check />
+            </div>
+            <p class="text-gray-800 text-2xl font-semibold">{miedo}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

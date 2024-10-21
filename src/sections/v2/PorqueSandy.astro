@@ -1,0 +1,38 @@
+---
+import Titulo from "../../components/Titulo.astro";
+import Check from "../../svg/Check.astro";
+
+import { URL_BASE } from "../../constans";
+
+const motivos = [
+  "Porque te enseña desde el conocimiento que solo la acumulación de experiencia durante más 14 años en el mundo publicitario real puede dar.",
+  "Porque es experta en inteligencia de mercados y ha sido gestora del éxito de más de 100 campañas publicitarias para marcas reconocidas en Latinoamérica y Estados Unidos.",
+  "Porque como emprendedora y empresaria tiene un camino recorrido que le permite enseñarte con conocimiento de causa.",
+  "Porque ha creado 3 compañías exitosas, las ha hecho crecer, expandir sus fronteras y mantenerse vigente en el tiempo."
+];
+---
+
+<section class="py-20 bg-morado-market px-2">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="text-center">
+      <Titulo color="text-white">¿Por qué con Sandy?</Titulo>
+    </div>
+    <div class="flex flex-col lg:flex-row items-center pt-12 ">
+      <div class="space-y-6 basis-1/2">
+        {
+          motivos.map((miedo) => (
+            <div class="flex gap-4 space-y-2">
+              <div class="text-verde-market mt-2">
+                <Check />
+              </div>
+              <p class="text-gray-100 text-2xl font-semibold">{miedo}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="basis-1/2">
+        <img width="500" height="500px" class="w-full h-auto" loading="lazy" src={URL_BASE + "img/sandy.webp"} alt="Foto de sandy baron" />
+      </div>
+    </div>
+  </div>
+</section>
