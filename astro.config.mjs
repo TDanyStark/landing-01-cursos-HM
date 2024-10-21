@@ -9,5 +9,5 @@ export default defineConfig({
   // base
   base: "l/despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
   // output dir
-  outDir: "despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
+  outDir: "l/despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
 });
