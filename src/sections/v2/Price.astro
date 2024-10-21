@@ -1,0 +1,43 @@
+---
+import { URL_BASE } from "../../constans";
+import Calltoaction from "../../components/Calltoaction.astro";
+---
+
+<div class="mt-16 flex justify-center">
+  <div class="text-center">
+    <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+      <!-- Precio Regular -->
+      <div
+        class="text-gray-500 border-4 border-gray-500 p-8 rounded-lg flex flex-col items-center"
+      >
+        <p class="text-2xl font-semibold">PRECIO REGULAR</p>
+        <span class="text-xl">UN PAGO ÚNICO DE</span>
+        <div class="flex items-center mt-2 relative text-4xl font-bold">
+          <span class="mb-10">$</span>
+          <span class="text-8xl line-through">297</span>
+          <span class="mt-12">usd</span>
+        </div>
+      </div>
+
+      <!-- Precio Especial -->
+      <div
+        class="bg-morado-market border-4 border-morado-market text-white p-8 rounded-lg flex flex-col items-center min-w-80"
+      >
+        <p class="text-2xl font-semibold">PRECIO ESPECIAL</p>
+        <span class="text-xl">(AHORA $200 USD)</span>
+        <div class="flex items-center mt-2 text-4xl font-bold">
+          <span class="mb-10">$</span>
+          <span class="text-8xl">97</span>
+          <span class="mt-12">usd</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center mt-12">
+      <img src={URL_BASE + "img/creditcard.webp"} alt="Tarjetas aceptadas" />
+      <span class="text-xl font-semibold">Pago seguro por Stripe</span>
+    </div>
+  </div>
+</div>
+<div class="mt-16 flex justify-center">
+  <Calltoaction />
+</div>

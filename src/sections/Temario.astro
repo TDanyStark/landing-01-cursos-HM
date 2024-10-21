@@ -63,6 +63,7 @@ import Calltoaction from "../components/Calltoaction.astro";
 import CardModulos from "../components/CardModulos.astro";
 
 import { URL_BASE } from "../constans";
+import Price from "./v2/Price.astro";
 
 ---
 
@@ -78,18 +79,6 @@ import { URL_BASE } from "../constans";
     <div class="flex flex-col gap-8 mt-16">
       {modulos.map((modulo) => <CardModulos modulo={modulo} />)}
     </div>
-    <div class="mt-16 flex justify-center">
-      <div class="text-center">
-        <p class="text-4xl font-semibold">Curso valorado en <span class="block text-red-600 line-through">150 USD</span></p>
-        <p class="text-6xl font-semibold mt-4">Oferta de lanzamiento <span class="block font-bold text-green-500 text-7xl">50 USD</span></p>
-        <div class="flex flex-col items-center mt-12">
-          <img  src={URL_BASE + "img/creditcard.webp"} alt="Tarjetas aceptadas">
-          <span class="text-xl font-semibold">Pago seguro por Stripe</span>
-        </div>
-      </div>
-    </div>
-    <div class="mt-16 flex justify-center">
-      <Calltoaction />
-    </div>
+    <Price />
   </div>
 </section>

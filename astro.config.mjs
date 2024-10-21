@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
 
   // base
-  base: "l/despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
+  base: "l/despierta_de_novato_a_estratega_para_posicionar_tu_marca",
   // output dir
-  outDir: "l/despierta_claves_del_marketing_antes_de_iniciar_tu_propio_negocio",
+  outDir: "l/despierta_de_novato_a_estratega_para_posicionar_tu_marca",
 });
